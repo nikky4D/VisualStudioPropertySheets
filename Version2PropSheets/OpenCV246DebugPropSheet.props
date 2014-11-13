@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <ExecutablePath>$(DXSDK_DIR)Utilities\bin\x86;C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin;$(ExecutablePath)</ExecutablePath>
+  </PropertyGroup>
+  <ItemDefinitionGroup>
+    <ClCompile>
+      <AdditionalIncludeDirectories>C:\opencv246\Builds\opencvCUDAQt\install\include;$(KINECTSDK10_DIR)inc;C:\Program Files (x86)\Visual Leak Detector\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <AdditionalLibraryDirectories>C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\lib;C:\opencv246\Source\TBB\tbb42_20130725oss\lib\ia32\vc10;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>opencv_calib3d246d.lib;opencv_contrib246d.lib;opencv_core246d.lib;opencv_features2d246d.lib;opencv_flann246d.lib;opencv_gpu246d.lib;opencv_highgui246d.lib;opencv_imgproc246d.lib;opencv_legacy246d.lib;opencv_ml246d.lib;opencv_nonfree246d.lib;opencv_objdetect246d.lib;opencv_photo246d.lib;opencv_stitching246d.lib;opencv_superres246d.lib;opencv_video246d.lib;opencv_videostab246d.lib;opencv_ts246d.lib;opencv_ocl246d.lib;tbb_debug.lib;tbb_preview_debug.lib;tbbmalloc_debug.lib;tbbmalloc_proxy_debug.lib;tbbproxy_debug.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+    <PostBuildEvent>
+      <Command>xcopy "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_imgproc246d.dll"  "$(SolutionDir)Debug" /y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_core246d.dll"  "$(SolutionDir)Debug" /y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_calib3d246d.dll"  "$(SolutionDir)Debug" /y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_contrib246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_highgui246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_flann246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_legacy246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_core246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_nonfree246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_objdetect246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_video246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_videostab246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_gpu246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_features2d246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_ts246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_ml246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_photo246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_superres246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_stitching246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_ocl246d.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Builds\opencvCUDAQt\install\x86\vc10\bin\opencv_ffmpeg246.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Source\TBB\tbb42_20130725oss\bin\ia32\vc10\tbb_debug.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Source\TBB\tbb42_20130725oss\bin\ia32\vc10\tbb_preview_debug.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Source\TBB\tbb42_20130725oss\bin\ia32\vc10\tbbmalloc_debug.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Source\TBB\tbb42_20130725oss\bin\ia32\vc10\tbb_proxy_debug.dll"  "$(SolutionDir)Debug"/y /s /e /i /d
+xcopy  "C:\opencv246\Source\TBB\tbb42_20130725oss\bin\ia32\vc10\tbbmalloc_proxy_debug.dll"  "$(SolutionDir)Debug"/y /s /e /i /d</Command>
+    </PostBuildEvent>
+  </ItemDefinitionGroup>
+  <ItemGroup />
+</Project>
